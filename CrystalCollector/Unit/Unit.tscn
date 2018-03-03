@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Unit/UnitLogic.vs" type="Script" id=1]
+[ext_resource path="res://Unit/UnitNavigator.gd" type="Script" id=2]
+[ext_resource path="res://Unit/Animations/walk1.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 8.0
+
+[node name="Unit" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pickable" ]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+visible = false
+animation = "default"
+
+[node name="FeetCollider2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 0, 16 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="JobNavigator" type="Navigation2D" parent="." index="2"]
+
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="." index="3"]
+
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+offset = Vector2( 32, -144 )
+_sections_unfolded = [ "Offset" ]
+
+[connection signal="job_done" from="JobNavigator" to="." method="_on_JobNavigator_job_done"]
+
+

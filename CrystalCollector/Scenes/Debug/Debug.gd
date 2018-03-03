@@ -12,6 +12,7 @@ func _ready():
 func _gui_input(event):
 	if event is InputEventMouseButton:
 		mousePos = event.global_position
+		update()
 		print(mousePos)
 
 func _draw():
