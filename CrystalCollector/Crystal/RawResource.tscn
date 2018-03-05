@@ -1,16 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Crystal/RawResource.gd" type="Script" id=1]
 [ext_resource path="res://Crystal/hjm-crystal_spades_edited.png" type="Texture" id=2]
+[ext_resource path="res://Crystal/ClickBox.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
+resource_local_to_scene = true
 custom_solver_bias = 0.0
-radius = 8.0
+radius = 16.0
+_sections_unfolded = [ "Resource" ]
 
 [node name="RawResource" type="StaticBody2D" index="0"]
 
-input_pickable = false
+input_pickable = true
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -18,7 +21,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Pickable", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -26,7 +29,7 @@ shape = SubResource( 1 )
 
 [node name="Crystal5" type="Sprite" parent="." index="1"]
 
-position = Vector2( -7.95227, -31.8092 )
+position = Vector2( -10.7924, -19.3127 )
 z_index = -1
 texture = ExtResource( 2 )
 region_enabled = true
@@ -35,7 +38,7 @@ _sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="Crystal7" type="Sprite" parent="." index="2"]
 
-position = Vector2( 4.35335, -38.1528 )
+position = Vector2( 1.51326, -25.6564 )
 z_index = -1
 texture = ExtResource( 2 )
 region_enabled = true
@@ -44,11 +47,28 @@ _sections_unfolded = [ "Region", "Transform", "Z Index" ]
 
 [node name="Crystal15" type="Sprite" parent="." index="3"]
 
-position = Vector2( 7.19341, -55.1934 )
+position = Vector2( 4.35332, -42.697 )
 z_index = -2
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 822, 248, 64, 96 )
 _sections_unfolded = [ "Region", "Transform", "Z Index" ]
+
+[node name="ClickBox" type="Container" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -24.0
+margin_top = -80.0
+margin_right = 24.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 3 )
 
 
