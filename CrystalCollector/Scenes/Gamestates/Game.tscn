@@ -8,7 +8,7 @@
 [ext_resource path="res://Crystal/RawResourceManager.vs" type="Script" id=6]
 [ext_resource path="res://Crystal/RawResource.tscn" type="PackedScene" id=7]
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 [node name="Debug" type="Control" parent="." index="0"]
 

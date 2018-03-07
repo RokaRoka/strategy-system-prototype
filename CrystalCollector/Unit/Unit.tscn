@@ -1,10 +1,45 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Unit/UnitLogic.vs" type="Script" id=1]
 [ext_resource path="res://Unit/Animations/walk1.png" type="Texture" id=2]
-[ext_resource path="res://Unit/UnitClickBox.gd" type="Script" id=3]
+[ext_resource path="res://Unit/Animations/walk2.png" type="Texture" id=3]
+[ext_resource path="res://Unit/Animations/walk3.png" type="Texture" id=4]
+[ext_resource path="res://Unit/Animations/walk4.png" type="Texture" id=5]
+[ext_resource path="res://Unit/Animations/mine11.png" type="Texture" id=6]
+[ext_resource path="res://Unit/Animations/mine2.png" type="Texture" id=7]
+[ext_resource path="res://Unit/Animations/mine3.png" type="Texture" id=8]
+[ext_resource path="res://Unit/Animations/mine4.png" type="Texture" id=9]
+[ext_resource path="res://Unit/Animations/mine5.png" type="Texture" id=10]
+[ext_resource path="res://Unit/Animations/mine6.png" type="Texture" id=11]
+[ext_resource path="res://Unit/Animations/mine7.png" type="Texture" id=12]
+[ext_resource path="res://Unit/Animations/mine8.png" type="Texture" id=13]
+[ext_resource path="res://Unit/Animations/mine9.png" type="Texture" id=14]
+[ext_resource path="res://Unit/Animations/mine10.png" type="Texture" id=15]
+[ext_resource path="res://Unit/UnitAnimator.gd" type="Script" id=16]
+[ext_resource path="res://Unit/UnitClickBox.gd" type="Script" id=17]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="SpriteFrames" id=1]
+
+resource_name = "UnitFrames"
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "walk",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "stand",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "mine",
+"speed": 16.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
 radius = 8.0
@@ -17,25 +52,30 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pickable" ]
-spd = 160.0
+spd = 200.0
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+[node name="UnitAnimator" type="AnimatedSprite" parent="." index="0"]
 
-visible = false
-animation = "default"
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 1 )
+animation = "mine"
+frame = 20
+offset = Vector2( 32, -192 )
+script = ExtResource( 16 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="FeetCollider2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 0, 16 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="." index="2"]
 
+visible = false
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
 offset = Vector2( 32, -144 )
-_sections_unfolded = [ "Offset" ]
+_sections_unfolded = [ "Offset", "Region" ]
 
 [node name="ClickBox" type="Container" parent="." index="3"]
 
@@ -44,16 +84,22 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -24.0
-margin_top = -64.0
+margin_top = -80.0
 margin_right = 24.0
-margin_bottom = 32.0
+margin_bottom = 16.0
 rect_pivot_offset = Vector2( 0, 0 )
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 3 )
+script = ExtResource( 17 )
 _sections_unfolded = [ "Rect" ]
+
+[connection signal="anim_mine" from="." to="UnitAnimator" method="_on_Unit_anim_mine"]
+
+[connection signal="anim_stand" from="." to="UnitAnimator" method="_on_Unit_anim_stand"]
+
+[connection signal="anim_walk" from="." to="UnitAnimator" method="_on_Unit_anim_walk"]
 
 [connection signal="selected" from="ClickBox" to="." method="_on_ClickBox_selected"]
 

@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/walk1.png-bc4f3a6745d161402079d7d797142d7f.stex"
+path="res://.import/mine1.png-e5d1a44d9284dd55c37354d145ebfbda.stex"
 
 [deps]
 
-source_file="res://Unit/Animations/walk1.png"
-source_md5="216e5dddd905ff704930c4b88e8bc74e"
+source_file="res://Unit/Animations/mine1.png"
+source_md5="f9546208fc07081a0a10a04913bf0ed6"
 
-dest_files=[ "res://.import/walk1.png-bc4f3a6745d161402079d7d797142d7f.stex" ]
+dest_files=[ "res://.import/mine1.png-e5d1a44d9284dd55c37354d145ebfbda.stex" ]
 dest_md5="bf8de0e9f0d4abd099d75828268640e2"
 
 [params]

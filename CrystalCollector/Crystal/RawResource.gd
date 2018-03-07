@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 #	CONSTANT DATA
-const RESOURCE_THRESHOLD = [500, 400, 300, 200, 100, 0]
+const RESOURCE_THRESHOLD = [300, 100, 0]
 
 #sprite for each threshold
 #const RESOURCE_SPRITES = []
@@ -10,10 +10,6 @@ const RESOURCE_THRESHOLD = [500, 400, 300, 200, 100, 0]
 var resourceAmount = 500
 var resourceThresholdIndex = 0
 
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
 
 #	RESOURCE LOGIC
 
