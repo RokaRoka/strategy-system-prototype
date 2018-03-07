@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Debug/Debug.gd" type="Script" id=1]
-[ext_resource path="res://Crystal/RawResource.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Unit/UnitManager.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Unit/PathManager.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Unit/UnitManager.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Unit/PathManager.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Map/Homebase.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Crystal/RawResourceManager.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Crystal/RawResourceManager.vs" type="Script" id=6]
+[ext_resource path="res://Crystal/RawResource.tscn" type="PackedScene" id=7]
 
 [node name="Game" type="Node" index="0"]
 
@@ -24,14 +27,26 @@ size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Mouse" ]
 
-[node name="RawResource" parent="." index="1" instance=ExtResource( 2 )]
+[node name="UnitManager" parent="." index="1" instance=ExtResource( 2 )]
+
+[node name="PathManager" parent="." index="2" instance=ExtResource( 3 )]
+
+[node name="Homebase" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 877.566, 527.426 )
+z_index = -5
+_sections_unfolded = [ "Collision", "Z Index" ]
+
+[node name="RawResourceManager" parent="." index="4" instance=ExtResource( 5 )]
+
+script = ExtResource( 6 )
+
+[node name="RawResource" parent="RawResourceManager" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 481.681, 256.745 )
 
-[node name="UnitManager" parent="." index="2" instance=ExtResource( 3 )]
-
-[node name="PathManager" parent="." index="3" instance=ExtResource( 4 )]
-
 [connection signal="job_walk" from="PathManager" to="UnitManager" method="_on_PathManager_job_walk"]
+
+[connection signal="job_mine" from="RawResourceManager" to="UnitManager" method="_on_RawResourceManager_job_mine"]
 
 
