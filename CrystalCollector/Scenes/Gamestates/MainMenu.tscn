@@ -1,0 +1,223 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Gamestates/MainMenuControl.gd" type="Script" id=1]
+[ext_resource path="res://UI/Fonts/gridlocked/Gridlocked.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://UI/Fonts/debock/Debock-Personal-Use.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+
+resource_local_to_scene = true
+size = 60
+use_mipmaps = true
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 32
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="MainMenu" type="Node" index="0"]
+
+[node name="BaseControl" type="Control" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 50.0
+margin_right = -50.0
+margin_bottom = -50.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Grow Direction", "Margin" ]
+
+[node name="VSplitContainer" type="VSplitContainer" parent="BaseControl" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+split_offset = 0
+collapsed = false
+dragger_visibility = 0
+
+[node name="Title" type="Label" parent="BaseControl/VSplitContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 924.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 0, 96 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Crystal Collector"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BaseControl/VSplitContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 110.0
+margin_right = 924.0
+margin_bottom = 500.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 32
+alignment = 1
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="PlayGame" type="Button" parent="BaseControl/VSplitContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 398.0
+margin_top = 51.0
+margin_right = 526.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 128, 48 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Play Game"
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Instructions" type="Button" parent="BaseControl/VSplitContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 398.0
+margin_top = 131.0
+margin_right = 526.0
+margin_bottom = 179.0
+rect_min_size = Vector2( 128, 48 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Instructions"
+flat = false
+align = 1
+_sections_unfolded = [ "Margin" ]
+
+[node name="Credits" type="Button" parent="BaseControl/VSplitContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 398.0
+margin_top = 211.0
+margin_right = 526.0
+margin_bottom = 259.0
+rect_min_size = Vector2( 128, 48 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Credits"
+flat = false
+align = 1
+_sections_unfolded = [ "Margin", "Size Flags" ]
+
+[node name="Quit" type="Button" parent="BaseControl/VSplitContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 398.0
+margin_top = 291.0
+margin_right = 526.0
+margin_bottom = 339.0
+rect_min_size = Vector2( 128, 48 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Quit"
+flat = false
+align = 1
+_sections_unfolded = [ "Hint", "Margin", "Rect", "Size Flags" ]
+
+[connection signal="button_down" from="BaseControl/VSplitContainer/VBoxContainer/PlayGame" to="BaseControl" method="_on_PlayGame_button_down"]
+
+[connection signal="button_down" from="BaseControl/VSplitContainer/VBoxContainer/Instructions" to="BaseControl" method="_on_Instructions_button_down"]
+
+[connection signal="button_down" from="BaseControl/VSplitContainer/VBoxContainer/Credits" to="BaseControl" method="_on_Credits_button_down"]
+
+[connection signal="button_down" from="BaseControl/VSplitContainer/VBoxContainer/Quit" to="BaseControl" method="_on_Quit_button_down"]
+
+
