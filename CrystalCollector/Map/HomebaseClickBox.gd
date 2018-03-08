@@ -45,3 +45,17 @@ func _on_AddUnit_button_down():
 	if get_parent().checkResource(UPGRADE_UNIT_COST):
 		get_parent().subtractResource(UPGRADE_UNIT_COST)
 		get_parent().emit_signal( "add_unit_fulfilled", get_parent().position + Vector2(-224, -16) )
+
+
+func _on_UpSpeed_button_down():
+	#check resources
+	if get_parent().checkResource(UPGRADE_SPEED_COST):
+		get_parent().subtractResource(UPGRADE_SPEED_COST)
+		get_parent().emit_signal( "up_speed_fulfilled" )
+
+
+func _on_UpGather_button_down():
+	#check resources
+	if get_parent().checkResource(UPGRADE_GATHER_COST):
+		get_parent().subtractResource(UPGRADE_GATHER_COST)
+		get_parent().emit_signal( "up_gather_fulfilled" )

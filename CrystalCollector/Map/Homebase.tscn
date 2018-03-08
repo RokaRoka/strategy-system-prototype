@@ -187,7 +187,11 @@ _sections_unfolded = [ "Rect" ]
 
 [connection signal="mouse_entered" from="ClickBox/UpgradePanel/VBoxContainer/AddUnit" to="ClickBox" method="_on_AddUnit_mouse_entered"]
 
+[connection signal="button_down" from="ClickBox/UpgradePanel/VBoxContainer/UpSpeed" to="ClickBox" method="_on_UpSpeed_button_down"]
+
 [connection signal="mouse_entered" from="ClickBox/UpgradePanel/VBoxContainer/UpSpeed" to="ClickBox" method="_on_UpSpeed_mouse_entered"]
+
+[connection signal="button_down" from="ClickBox/UpgradePanel/VBoxContainer/UpGather" to="ClickBox" method="_on_UpGather_button_down"]
 
 [connection signal="mouse_entered" from="ClickBox/UpgradePanel/VBoxContainer/UpGather" to="ClickBox" method="_on_UpGather_mouse_entered"]
 
