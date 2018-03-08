@@ -15,7 +15,7 @@ func _ready():
 	pass
 
 func addResource( toAdd ):
-	resourceAmount += toAdd
+	resourceAmount += round(toAdd)
 	emit_signal( "resource_gained", resourceAmount )
 
 func subtractResource( toSub ):

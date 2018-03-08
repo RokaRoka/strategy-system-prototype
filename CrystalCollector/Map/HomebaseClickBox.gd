@@ -5,7 +5,6 @@ const UPGRADE_SPEED_COST = 30
 const UPGRADE_GATHER_COST = 30
 
 onready var upgradePanel = get_node( "UpgradePanel" )
-onready var unitManager = get_node( "UnitManager" )
 
 var mousePosition = Vector2(0, 0)
 
