@@ -15,6 +15,6 @@ var resourceThresholdIndex = 0
 
 func mineResource(var miner):
 	#TODO if miner is a Unit
-	#	resourceAmount -= miner.mineStrength
+	#	resourceAmount -= miner.mineAmount
 	#	return miner.mineStrength
 	pass
