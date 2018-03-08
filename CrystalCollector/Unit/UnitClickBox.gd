@@ -1,8 +1,7 @@
 extends Container
 
-# class member variables go here, for example:
-
 signal selected
+
 
 func _gui_input(event):
 	if event is InputEventMouseButton:

@@ -1,12 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Map/Homebase.gd" type="Script" id=1]
 [ext_resource path="res://Background/snow_tilesets/snowplains_rottentower.png" type="Texture" id=2]
+[ext_resource path="res://Map/HomebaseClickBox.gd" type="Script" id=3]
+[ext_resource path="res://UI/Fonts/gridlocked/Gridlocked.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( 0, 0, 136, 64, 0, 128, -136, 64 )
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 32
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [node name="Homebase" type="StaticBody2D"]
 
@@ -32,5 +42,152 @@ _sections_unfolded = [ "Offset" ]
 position = Vector2( 0, -64 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="ClickBox" type="Container" parent="." index="2"]
+
+self_modulate = Color( 1, 1, 1, 0.734824 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -140.0
+margin_top = -242.0
+margin_right = 148.0
+margin_bottom = 46.0
+rect_min_size = Vector2( 256, 256 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 3 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="UpgradePanel" type="Panel" parent="ClickBox" index="0"]
+
+visible = false
+self_modulate = Color( 1, 1, 1, 0.734824 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 256, 256 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Grow Direction", "Margin", "Mouse", "Rect", "Visibility" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ClickBox/UpgradePanel" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -133.5
+margin_top = -128.0
+margin_right = 133.5
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 16
+alignment = 1
+_sections_unfolded = [ "Mouse", "custom_constants" ]
+
+[node name="AddUnit" type="Button" parent="ClickBox/UpgradePanel/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 16.0
+margin_right = 267.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 128, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Recruit Unit (15)"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="UpSpeed" type="Button" parent="ClickBox/UpgradePanel/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 96.0
+margin_right = 267.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 128, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Speed Upgrade (30)"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="UpGather" type="Button" parent="ClickBox/UpgradePanel/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 176.0
+margin_right = 267.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 128, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Gather Upgrade (30)"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[connection signal="button_down" from="ClickBox/UpgradePanel/VBoxContainer/AddUnit" to="ClickBox" method="_on_AddUnit_button_down"]
+
+[connection signal="mouse_entered" from="ClickBox/UpgradePanel/VBoxContainer/AddUnit" to="ClickBox" method="_on_AddUnit_mouse_entered"]
+
+[connection signal="mouse_entered" from="ClickBox/UpgradePanel/VBoxContainer/UpSpeed" to="ClickBox" method="_on_UpSpeed_mouse_entered"]
+
+[connection signal="mouse_entered" from="ClickBox/UpgradePanel/VBoxContainer/UpGather" to="ClickBox" method="_on_UpGather_mouse_entered"]
 
 
