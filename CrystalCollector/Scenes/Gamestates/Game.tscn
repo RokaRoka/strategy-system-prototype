@@ -49,11 +49,12 @@ use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 [node name="BaseControl" type="Control" parent="." index="0"]
 
 pause_mode = 2
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -483,7 +484,6 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="RawResourceManager" parent="." index="3" instance=ExtResource( 11 )]
 
-editor/display_folded = true
 script = ExtResource( 12 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 

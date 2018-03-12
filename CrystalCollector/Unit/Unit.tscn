@@ -2,19 +2,19 @@
 
 [ext_resource path="res://Unit/UnitLogic.vs" type="Script" id=1]
 [ext_resource path="res://Unit/Animations/walk1.png" type="Texture" id=2]
-[ext_resource path="res://Unit/Animations/mine11.png" type="Texture" id=3]
-[ext_resource path="res://Unit/Animations/mine2.png" type="Texture" id=4]
-[ext_resource path="res://Unit/Animations/mine3.png" type="Texture" id=5]
-[ext_resource path="res://Unit/Animations/mine4.png" type="Texture" id=6]
-[ext_resource path="res://Unit/Animations/mine5.png" type="Texture" id=7]
-[ext_resource path="res://Unit/Animations/mine6.png" type="Texture" id=8]
-[ext_resource path="res://Unit/Animations/mine7.png" type="Texture" id=9]
-[ext_resource path="res://Unit/Animations/mine8.png" type="Texture" id=10]
-[ext_resource path="res://Unit/Animations/mine9.png" type="Texture" id=11]
-[ext_resource path="res://Unit/Animations/mine10.png" type="Texture" id=12]
-[ext_resource path="res://Unit/Animations/walk2.png" type="Texture" id=13]
-[ext_resource path="res://Unit/Animations/walk3.png" type="Texture" id=14]
-[ext_resource path="res://Unit/Animations/walk4.png" type="Texture" id=15]
+[ext_resource path="res://Unit/Animations/walk2.png" type="Texture" id=3]
+[ext_resource path="res://Unit/Animations/walk3.png" type="Texture" id=4]
+[ext_resource path="res://Unit/Animations/walk4.png" type="Texture" id=5]
+[ext_resource path="res://Unit/Animations/mine11.png" type="Texture" id=6]
+[ext_resource path="res://Unit/Animations/mine2.png" type="Texture" id=7]
+[ext_resource path="res://Unit/Animations/mine3.png" type="Texture" id=8]
+[ext_resource path="res://Unit/Animations/mine4.png" type="Texture" id=9]
+[ext_resource path="res://Unit/Animations/mine5.png" type="Texture" id=10]
+[ext_resource path="res://Unit/Animations/mine6.png" type="Texture" id=11]
+[ext_resource path="res://Unit/Animations/mine7.png" type="Texture" id=12]
+[ext_resource path="res://Unit/Animations/mine8.png" type="Texture" id=13]
+[ext_resource path="res://Unit/Animations/mine9.png" type="Texture" id=14]
+[ext_resource path="res://Unit/Animations/mine10.png" type="Texture" id=15]
 [ext_resource path="res://Unit/UnitAnimator.gd" type="Script" id=16]
 [ext_resource path="res://Unit/UnitClickBox.gd" type="Script" id=17]
 [ext_resource path="res://Player/UI/selector.png" type="Texture" id=18]
@@ -24,20 +24,20 @@
 
 resource_name = "UnitFrames"
 animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "walk",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "stand",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "mine",
 "speed": 16.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "walk",
-"speed": 10.0
 } ]
 _sections_unfolded = [ "Resource" ]
 
