@@ -6,9 +6,9 @@ onready var resourceUI = get_node( "ResourcePanel/ResourcesUI" )
 
 #win state
 onready var winScreen = get_node( "WinScreen" )
-onready var medalGoldNode = get_node( "WinScreen/ResultsPanel/MarginContainer/VBoxContainer/HBoxContainer/BronzeMedalTexture" )
+onready var medalGoldNode = get_node( "WinScreen/ResultsPanel/MarginContainer/VBoxContainer/HBoxContainer/GoldMedalTexture" )
 onready var medalSilverNode = get_node( "WinScreen/ResultsPanel/MarginContainer/VBoxContainer/HBoxContainer/SilverMedalTexture" )
-onready var medalBronzeNode = get_node( "WinScreen/ResultsPanel/MarginContainer/VBoxContainer/HBoxContainer/GoldMedalTexture" )
+onready var medalBronzeNode = get_node( "WinScreen/ResultsPanel/MarginContainer/VBoxContainer/HBoxContainer/BronzeMedalTexture" )
 
 
 onready var medalTitleNode = get_node( "WinScreen/ResultsPanel/MarginContainer/VBoxContainer/MedalTitle" )
@@ -54,22 +54,22 @@ func updateResults():
 	#handle medals
 	var resourcesFinal = int( resourceUI.text )
 	#first, update resources
-	resourceResult.text = resourceResult.text + String(resourcesFinal)
+	resourceResult.text = String(resourcesFinal) + resourceResult.text
 	
 	if resourcesFinal < MEDAL_THRESHOLD_BRONZE:
 		#sad  :(
-		medalTitleNode = "NO MEDAL..."
+		medalTitleNode.text = "NO MEDAL..."
 	elif resourcesFinal < MEDAL_THRESHOLD_SILVER:
 		#ok
-		medalTitleNode = "BRONZE MEDAL."
+		medalTitleNode.text = "BRONZE MEDAL."
 		medalBronzeNode.show()
 	elif resourcesFinal < MEDAL_THRESHOLD_GOLD:
 		#hey, nice
-		medalTitleNode = "SILVER MEDAL!"
+		medalTitleNode.text = "SILVER MEDAL!"
 		medalSilverNode.show()
 	else:
 		#woah :O
-		medalTitleNode = "GOLD MEDAL!!!"
+		medalTitleNode.text = "GOLD MEDAL!!!"
 		medalGoldNode.show()
 
 
