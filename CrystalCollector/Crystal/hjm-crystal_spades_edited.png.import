@@ -7,10 +7,7 @@ path="res://.import/hjm-crystal_spades_edited.png-fcd2b579e0bbb3de7d2240c230727c
 [deps]
 
 source_file="res://Crystal/hjm-crystal_spades_edited.png"
-source_md5="f788b23435dcb2440997cce656ca556b"
-
 dest_files=[ "res://.import/hjm-crystal_spades_edited.png-fcd2b579e0bbb3de7d2240c230727c0c.stex" ]
-dest_md5="86f3256fb2e1f0ca121dfbfce2e57a8b"
 
 [params]
 

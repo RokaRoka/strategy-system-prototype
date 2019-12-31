@@ -1,0 +1,750 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Gamestates/CreditsControl.gd" type="Script" id=1]
+[ext_resource path="res://UI/Fonts/gridlocked/Gridlocked.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://UI/Fonts/debock/Debock-Personal-Use.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scenes/Gamestates/Credits/HyperLinkButton.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Gamestates/Credits/ClipboardNotifier.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 48
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 24
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 32
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="Credits" type="Node" index="0"]
+
+[node name="BaseControl" type="MarginContainer" parent="." index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+script = ExtResource( 1 )
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="VBox" type="VBoxContainer" parent="BaseControl" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 974.0
+margin_bottom = 550.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="CreditsTitle" type="Label" parent="BaseControl/VBox" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 924.0
+margin_bottom = 78.0
+rect_min_size = Vector2( 256, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Credits"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="HSeparator" type="HSeparator" parent="BaseControl/VBox" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 82.0
+margin_right = 924.0
+margin_bottom = 98.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 16
+
+[node name="Panel" type="Panel" parent="BaseControl/VBox" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 102.0
+margin_right = 924.0
+margin_bottom = 428.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="HBox" type="ScrollContainer" parent="BaseControl/VBox/Panel" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+margin_top = -163.0
+margin_right = 924.0
+margin_bottom = 163.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+scroll_horizontal = 0
+scroll_vertical_enabled = true
+scroll_vertical = 0
+_sections_unfolded = [ "Scroll" ]
+
+[node name="CreditsContainer" type="VBoxContainer" parent="BaseControl/VBox/Panel/HBox" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 912.0
+margin_bottom = 369.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 16
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Credit1" type="PanelContainer" parent="BaseControl/VBox/Panel/HBox/CreditsContainer" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 912.0
+margin_bottom = 39.0
+rect_min_size = Vector2( 0, 32 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="BaseControl/VBox/Panel/HBox/CreditsContainer/Credit1" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 296.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "Gameplay and Programming - Sam Scott"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="LinkButton" type="LinkButton" parent="BaseControl/VBox/Panel/HBox/CreditsContainer/Credit1" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 830.0
+margin_top = 12.0
+margin_right = 905.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 10
+size_flags_vertical = 6
+custom_colors/font_color = Color( 0.69075, 0.824599, 0.871094, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Itch.io Page"
+underline = 1
+script = ExtResource( 4 )
+_sections_unfolded = [ "Size Flags" ]
+link = "https://rokato.itch.io"
+
+[node name="Credit2" type="PanelContainer" parent="BaseControl/VBox/Panel/HBox/CreditsContainer" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 55.0
+margin_right = 912.0
+margin_bottom = 94.0
+rect_min_size = Vector2( 0, 32 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="BaseControl/VBox/Panel/HBox/CreditsContainer/Credit2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 518.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "Engine - Godot by Juan Linietsky, Ariel Manzur and various contributors"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="LinkButton" type="LinkButton" parent="BaseControl/VBox/Panel/HBox/CreditsContainer/Credit2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 809.0
+margin_top = 12.0
+margin_right = 905.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 10
+size_flags_vertical = 6
+custom_colors/font_color = Color( 0.69075, 0.824599, 0.871094, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Godot Website"
+underline = 1
+script = ExtResource( 4 )
+_sections_unfolded = [ "Size Flags" ]
+link = "https://godotengine.org/"
+
+[node name="Credit3" type="PanelContainer" parent="BaseControl/VBox/Panel/HBox/CreditsContainer" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 110.0
+margin_right = 912.0
+margin_bottom = 149.0
+rect_min_size = Vector2( 0, 32 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="BaseControl/VBox/Panel/HBox/CreditsContainer/Credit3" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 221.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "Font - Debock by Tama Putra"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="LinkButton" type="LinkButton" parent="BaseControl/VBox/Panel/HBox/CreditsContainer/Credit3" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 699.0
+margin_top = 12.0
+margin_right = 905.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 10
+size_flags_vertical = 6
+custom_colors/font_color = Color( 0.69075, 0.824599, 0.871094, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "www.creativemarket.com/tmvck"
+underline = 1
+script = ExtResource( 4 )
+_sections_unfolded = [ "Size Flags" ]
+link = "www.creativemarket.com/tmvck"
+
+[node name="Credit4" type="PanelContainer" parent="BaseControl/VBox/Panel/HBox/CreditsContainer" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 165.0
+margin_right = 912.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 0, 32 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="BaseControl/VBox/Panel/HBox/CreditsContainer/Credit4" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 292.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "Font - Gridlocked by Chequered Ink Ltd."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="LinkButton" type="LinkButton" parent="BaseControl/VBox/Panel/HBox/CreditsContainer/Credit4" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 767.0
+margin_top = 12.0
+margin_right = 905.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 10
+size_flags_vertical = 6
+custom_colors/font_color = Color( 0.69075, 0.824599, 0.871094, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "https://chequered.ink"
+underline = 1
+script = ExtResource( 4 )
+_sections_unfolded = [ "Size Flags" ]
+link = "https://chequered.ink"
+
+[node name="Credit5" type="PanelContainer" parent="BaseControl/VBox/Panel/HBox/CreditsContainer" index="4"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 220.0
+margin_right = 912.0
+margin_bottom = 259.0
+rect_min_size = Vector2( 0, 32 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="BaseControl/VBox/Panel/HBox/CreditsContainer/Credit5" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 515.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "Image - Snow Isometric Tileset by Clint Bellangers, edited by rubberduck"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="LinkButton" type="LinkButton" parent="BaseControl/VBox/Panel/HBox/CreditsContainer/Credit5" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 796.0
+margin_top = 12.0
+margin_right = 905.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 10
+size_flags_vertical = 6
+custom_colors/font_color = Color( 0.69075, 0.824599, 0.871094, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Link to OGA Post"
+underline = 1
+script = ExtResource( 4 )
+link = "https://opengameart.org/content/isometric-snow-tileset-flare"
+
+[node name="Credit6" type="PanelContainer" parent="BaseControl/VBox/Panel/HBox/CreditsContainer" index="5"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 275.0
+margin_right = 912.0
+margin_bottom = 314.0
+rect_min_size = Vector2( 0, 32 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="BaseControl/VBox/Panel/HBox/CreditsContainer/Credit6" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 407.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "Image - Various Isometric Crystals by Hansjörg Malthaner"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="LinkButton" type="LinkButton" parent="BaseControl/VBox/Panel/HBox/CreditsContainer/Credit6" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 783.0
+margin_top = 12.0
+margin_right = 905.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 10
+size_flags_vertical = 6
+custom_colors/font_color = Color( 0.69075, 0.824599, 0.871094, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Link to OGA Profile"
+underline = 1
+script = ExtResource( 4 )
+link = "http://opengameart.org/users/varkalandar"
+
+[node name="Credit7" type="PanelContainer" parent="BaseControl/VBox/Panel/HBox/CreditsContainer" index="6"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 330.0
+margin_right = 912.0
+margin_bottom = 369.0
+rect_min_size = Vector2( 0, 32 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="BaseControl/VBox/Panel/HBox/CreditsContainer/Credit7" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 270.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "Image - Medals by Kenney Vleugels"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="LinkButton" type="LinkButton" parent="BaseControl/VBox/Panel/HBox/CreditsContainer/Credit7" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 809.0
+margin_top = 12.0
+margin_right = 905.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 10
+size_flags_vertical = 6
+custom_colors/font_color = Color( 0.69075, 0.824599, 0.871094, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "www.kenney.nl"
+underline = 1
+script = ExtResource( 4 )
+link = "www.kenney.nl"
+
+[node name="HSeparator2" type="HSeparator" parent="BaseControl/VBox" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 432.0
+margin_right = 924.0
+margin_bottom = 448.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 16
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Back" type="Button" parent="BaseControl/VBox" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 796.0
+margin_top = 452.0
+margin_right = 924.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 128, 48 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 8
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Back"
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Size Flags" ]
+
+[node name="ClipboardNotifier" type="PanelContainer" parent="BaseControl" index="1"]
+
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 426.0
+margin_top = 522.0
+margin_right = 597.0
+margin_bottom = 550.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+script = ExtResource( 5 )
+_sections_unfolded = [ "Margin", "Visibility" ]
+
+[node name="Label" type="Label" parent="BaseControl/ClipboardNotifier" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 164.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.671875, 0.671875, 0.671875, 1 )
+text = "Link copied to clipboard."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="button_down" from="BaseControl/VBox/Back" to="BaseControl" method="_on_Back_button_down"]
+
+

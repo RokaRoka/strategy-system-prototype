@@ -7,10 +7,7 @@ path="res://.import/homebase.png-cdce0b1de56fa5dced9bb9b518ad0185.stex"
 [deps]
 
 source_file="res://Scenes/Gamestates/Instructions/homebase.png"
-source_md5="ee81a77a99afee0ba4400f1f14e8c8ba"
-
 dest_files=[ "res://.import/homebase.png-cdce0b1de56fa5dced9bb9b518ad0185.stex" ]
-dest_md5="bb150904559bfe3622dee2ae0202f879"
 
 [params]
 

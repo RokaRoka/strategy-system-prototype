@@ -7,10 +7,7 @@ path="res://.import/space_inlay.png-8d0a941afd4e4adc99ae0791b62388ca.stex"
 [deps]
 
 source_file="res://UI/Image/PixelUIpack/9-Slice/space_inlay.png"
-source_md5="1ea6994c37c1c3454ca185dc648e2c26"
-
 dest_files=[ "res://.import/space_inlay.png-8d0a941afd4e4adc99ae0791b62388ca.stex" ]
-dest_md5="689753dd2f5fc0232730c31875b4bffa"
 
 [params]
 

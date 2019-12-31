@@ -7,10 +7,7 @@ path="res://.import/tan_inlay.png-a319b391197e24db32e0972ac89a8a6a.stex"
 [deps]
 
 source_file="res://UI/Image/PixelUIpack/9-Slice/Ancient/tan_inlay.png"
-source_md5="10aea6930b92e7111d179f1706951716"
-
 dest_files=[ "res://.import/tan_inlay.png-a319b391197e24db32e0972ac89a8a6a.stex" ]
-dest_md5="d56aff9bd9dd6b076c9473639e241fc2"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/walk1.png-bc4f3a6745d161402079d7d797142d7f.stex"
 [deps]
 
 source_file="res://Unit/Animations/walk1.png"
-source_md5="216e5dddd905ff704930c4b88e8bc74e"
-
 dest_files=[ "res://.import/walk1.png-bc4f3a6745d161402079d7d797142d7f.stex" ]
-dest_md5="bf8de0e9f0d4abd099d75828268640e2"
 
 [params]
 

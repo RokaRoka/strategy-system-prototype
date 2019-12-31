@@ -7,7 +7,7 @@
 [ext_resource path="res://Scenes/Gamestates/Instructions/homebase.png" type="Texture" id=5]
 [ext_resource path="res://UI/Fonts/debock/Debock-Personal-Use.otf" type="DynamicFontData" id=6]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=4]
 
 size = 48
 use_mipmaps = false
@@ -15,7 +15,7 @@ use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Settings" ]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 
 size = 32
 use_mipmaps = false
@@ -23,7 +23,7 @@ use_filter = false
 font_data = ExtResource( 6 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Instructions" type="Node" index="0"]
+[node name="Instructions" type="Node"]
 
 [node name="BaseControl" type="Control" parent="." index="0"]
 
@@ -71,7 +71,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 50.0
 margin_right = 974.0
-margin_bottom = 580.0
+margin_bottom = 550.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -114,7 +114,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
 text = "Instructions"
 align = 1
 percent_visible = 1.0
@@ -138,7 +138,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
 text = "1 / 2"
 align = 1
 percent_visible = 1.0
@@ -173,7 +173,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 118.0
 margin_right = 924.0
-margin_bottom = 492.0
+margin_bottom = 462.0
 rect_min_size = Vector2( 640, 256 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -188,10 +188,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 27.0
+margin_left = 7.0
 margin_top = 7.0
-margin_right = 897.0
-margin_bottom = 367.0
+margin_right = 917.0
+margin_bottom = 337.0
 rect_min_size = Vector2( 512, 256 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -273,9 +273,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 496.0
+margin_top = 466.0
 margin_right = 924.0
-margin_bottom = 528.0
+margin_bottom = 498.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -287,14 +287,13 @@ _sections_unfolded = [ "custom_constants" ]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="BaseControl/MarginContainer/VBoxContainer" index="4"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 532.0
+margin_top = 502.0
 margin_right = 924.0
-margin_bottom = 580.0
+margin_bottom = 550.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -322,7 +321,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -349,7 +348,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -376,7 +375,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null

@@ -7,10 +7,7 @@ path="res://.import/selector.png-e4cc34411c29dad4326c5e59383ceda5.stex"
 [deps]
 
 source_file="res://Player/UI/selector.png"
-source_md5="0049ae5f6b30994f84ff62e96252a669"
-
 dest_files=[ "res://.import/selector.png-e4cc34411c29dad4326c5e59383ceda5.stex" ]
-dest_md5="775c4a8f59120984b70e8c3c88fe0b3f"
 
 [params]
 

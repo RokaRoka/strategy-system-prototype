@@ -87,9 +87,9 @@ func createNavPolygon():
 	var tempNavPoly = tempNavPolyNode.navpoly
 	
 	if tempNavPolyNode.enabled:
-		print("Temp nav poly enabled!")
-		print(tempNavPoly.get_outline_count())
-	
+		#print("Temp nav poly enabled!")
+		#print(tempNavPoly.get_outline_count())
+		pass
 	#add navmesh outlines
 	#for outline in navMeshOutlines:
 	#	tempNavPoly.add_outline(outline)
@@ -102,9 +102,9 @@ func createNavPolygon():
 	#create polygon
 	tempNavPoly.make_polygons_from_outlines()
 	
-	print("Outline count "+String(tempNavPoly.get_outline(0)))
-	print("Polygon count"+String(tempNavPoly.get_polygon_count()))
-	print("Polygon vertices"+String(tempNavPoly.get_vertices()))
+	#print("Outline count "+String(tempNavPoly.get_outline(0)))
+	#print("Polygon count"+String(tempNavPoly.get_polygon_count()))
+	#print("Polygon vertices"+String(tempNavPoly.get_vertices()))
 	
 	navMeshPolyID = navpoly_add(tempNavPoly, Transform2D( 0, Vector2(0, 0) ) )
 	
@@ -122,6 +122,6 @@ func findPath(var newPosition):
 	NavigationPolygonInstance.new()
 	var newPos = get_closest_point(newPosition)
 	
-	print("Going to "+String(newPos))
+	#print("Going to "+String(newPos))
 	
 	return newPos

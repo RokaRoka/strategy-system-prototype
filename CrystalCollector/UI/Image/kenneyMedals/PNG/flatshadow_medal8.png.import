@@ -7,10 +7,7 @@ path="res://.import/flatshadow_medal8.png-dd2f787b94e1e92ee4cc67b4741f3538.stex"
 [deps]
 
 source_file="res://UI/Image/kenneyMedals/PNG/flatshadow_medal8.png"
-source_md5="234e24a09af1a989ed088247aa6afa78"
-
 dest_files=[ "res://.import/flatshadow_medal8.png-dd2f787b94e1e92ee4cc67b4741f3538.stex" ]
-dest_md5="64666eead4b9c09e15ef8e6728761e38"
 
 [params]
 

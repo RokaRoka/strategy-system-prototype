@@ -7,10 +7,7 @@ path="res://.import/grey_inlay.png-a762e41e74c2a3a182dd6b4b44615c15.stex"
 [deps]
 
 source_file="res://UI/Image/PixelUIpack/9-Slice/Ancient/grey_inlay.png"
-source_md5="b1666f4f6dc2645c06d38300bd98a4ac"
-
 dest_files=[ "res://.import/grey_inlay.png-a762e41e74c2a3a182dd6b4b44615c15.stex" ]
-dest_md5="c8f959e3ec1b8e329e3e48d10aa6dd3f"
 
 [params]
 

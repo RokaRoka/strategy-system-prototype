@@ -7,10 +7,7 @@ path="res://.import/UIpackSheet_magenta.png-8e8dd7b8724769be33db0c16c60467b6.ste
 [deps]
 
 source_file="res://UI/Image/PixelUIpack/Spritesheet/UIpackSheet_magenta.png"
-source_md5="5a6acf86dbb1815cb9e4fb6d4a8a61b2"
-
 dest_files=[ "res://.import/UIpackSheet_magenta.png-8e8dd7b8724769be33db0c16c60467b6.stex" ]
-dest_md5="477cb44b856cf218a63a13a7771a2afb"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/snowplains_rottentower.png-3691906322bb0755011c1c570b49ec3c.
 [deps]
 
 source_file="res://Background/snow_tilesets/snowplains_rottentower.png"
-source_md5="5fe27ba67c91de4db89a012f3c2baf1a"
-
 dest_files=[ "res://.import/snowplains_rottentower.png-3691906322bb0755011c1c570b49ec3c.stex" ]
-dest_md5="38d6d3102225297a9d8c1ff11063133d"
 
 [params]
 

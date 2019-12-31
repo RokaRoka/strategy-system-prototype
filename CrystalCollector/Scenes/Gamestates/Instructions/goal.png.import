@@ -7,10 +7,7 @@ path="res://.import/goal.png-039531690035c5686b91819b1b03e8ef.stex"
 [deps]
 
 source_file="res://Scenes/Gamestates/Instructions/goal.png"
-source_md5="6029d7894381c7350c0e0e16522bdf09"
-
 dest_files=[ "res://.import/goal.png-039531690035c5686b91819b1b03e8ef.stex" ]
-dest_md5="a576346354e84014e1b7a5058e4c1c95"
 
 [params]
 

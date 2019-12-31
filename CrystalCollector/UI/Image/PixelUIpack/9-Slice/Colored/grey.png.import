@@ -7,10 +7,7 @@ path="res://.import/grey.png-ca12378e88ac01274b10d294dd35aef5.stex"
 [deps]
 
 source_file="res://UI/Image/PixelUIpack/9-Slice/Colored/grey.png"
-source_md5="6d0440e8040d73138ebc79a7a38eff2d"
-
 dest_files=[ "res://.import/grey.png-ca12378e88ac01274b10d294dd35aef5.stex" ]
-dest_md5="6c126eedfb61e3dbef947f4c00c8a42c"
 
 [params]
 

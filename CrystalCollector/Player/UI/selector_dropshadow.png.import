@@ -7,10 +7,7 @@ path="res://.import/selector_dropshadow.png-702c210e2596089dae826dc1aabef53d.ste
 [deps]
 
 source_file="res://Player/UI/selector_dropshadow.png"
-source_md5="5225c7a19c8a94949dcfe31162105dec"
-
 dest_files=[ "res://.import/selector_dropshadow.png-702c210e2596089dae826dc1aabef53d.stex" ]
-dest_md5="a67db4caa5392c3f496eedbc4e9202a7"
 
 [params]
 

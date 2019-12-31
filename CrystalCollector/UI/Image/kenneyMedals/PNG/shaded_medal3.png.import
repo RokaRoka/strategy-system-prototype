@@ -7,10 +7,7 @@ path="res://.import/shaded_medal3.png-299520a459670ea0256d4c7776563421.stex"
 [deps]
 
 source_file="res://UI/Image/kenneyMedals/PNG/shaded_medal3.png"
-source_md5="e53430bbf22d3f8d5e8980f45a1a3811"
-
 dest_files=[ "res://.import/shaded_medal3.png-299520a459670ea0256d4c7776563421.stex" ]
-dest_md5="e5fda623d9c27f924981fd4e8908f8f4"
 
 [params]
 

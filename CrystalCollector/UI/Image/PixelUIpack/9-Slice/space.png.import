@@ -7,10 +7,7 @@ path="res://.import/space.png-a24a4591046d23d0892d4832a31e7439.stex"
 [deps]
 
 source_file="res://UI/Image/PixelUIpack/9-Slice/space.png"
-source_md5="a30f5b9c52d5baa8437a7e43a3008e74"
-
 dest_files=[ "res://.import/space.png-a24a4591046d23d0892d4832a31e7439.stex" ]
-dest_md5="7f9dc812bea2c4731e7ee8d903de51a4"
 
 [params]
 

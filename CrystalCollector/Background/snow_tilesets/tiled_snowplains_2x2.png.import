@@ -7,10 +7,7 @@ path="res://.import/tiled_snowplains_2x2.png-a23f1ffce1ed82b4b13ae3944071b2f5.st
 [deps]
 
 source_file="res://Background/snow_tilesets/tiled_snowplains_2x2.png"
-source_md5="062b08822e9140fbcffd938c4d082726"
-
 dest_files=[ "res://.import/tiled_snowplains_2x2.png-a23f1ffce1ed82b4b13ae3944071b2f5.stex" ]
-dest_md5="dfbd060c8d90d6418b1961fe2066e18b"
 
 [params]
 

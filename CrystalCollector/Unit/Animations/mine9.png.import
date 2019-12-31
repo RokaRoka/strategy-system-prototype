@@ -7,10 +7,7 @@ path="res://.import/mine9.png-78eb2ec6e3814b73e4d121d9d0b436e9.stex"
 [deps]
 
 source_file="res://Unit/Animations/mine9.png"
-source_md5="abe82eb51abfcdc61ca5117f09d0b6e4"
-
 dest_files=[ "res://.import/mine9.png-78eb2ec6e3814b73e4d121d9d0b436e9.stex" ]
-dest_md5="21c4d356859e990ea9723beaf8ffed0e"
 
 [params]
 

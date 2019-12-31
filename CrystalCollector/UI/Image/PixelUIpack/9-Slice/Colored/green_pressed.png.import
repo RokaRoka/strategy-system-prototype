@@ -7,10 +7,7 @@ path="res://.import/green_pressed.png-ba9bc4a2b0faa52130ba7c0057f96dc3.stex"
 [deps]
 
 source_file="res://UI/Image/PixelUIpack/9-Slice/Colored/green_pressed.png"
-source_md5="12058f3b05f3198baefd6fbd4580980a"
-
 dest_files=[ "res://.import/green_pressed.png-ba9bc4a2b0faa52130ba7c0057f96dc3.stex" ]
-dest_md5="06803f5242f5243c6ef09b97fe63fb32"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/flag.png-e856e57ded020fa1c4a6b80bb6511e62.stex"
 [deps]
 
 source_file="res://Player/Feedback/flag.png"
-source_md5="9695fe3e7823009b6148a0190460b4a9"
-
 dest_files=[ "res://.import/flag.png-e856e57ded020fa1c4a6b80bb6511e62.stex" ]
-dest_md5="8ac59596020da99a7affbed54623495e"
 
 [params]
 

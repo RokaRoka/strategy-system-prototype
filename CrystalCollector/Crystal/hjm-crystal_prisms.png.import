@@ -7,10 +7,7 @@ path="res://.import/hjm-crystal_prisms.png-6825fd0c99912d3042e66afb816341d2.stex
 [deps]
 
 source_file="res://Crystal/hjm-crystal_prisms.png"
-source_md5="0411a00ba8df2cf33a59358206e63cd3"
-
 dest_files=[ "res://.import/hjm-crystal_prisms.png-6825fd0c99912d3042e66afb816341d2.stex" ]
-dest_md5="eb2c45a118a21d33aabd7509929a518c"
 
 [params]
 

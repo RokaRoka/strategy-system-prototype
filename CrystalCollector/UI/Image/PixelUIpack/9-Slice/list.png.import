@@ -7,10 +7,7 @@ path="res://.import/list.png-fa290153e4d4fed565f99f960c46b0b8.stex"
 [deps]
 
 source_file="res://UI/Image/PixelUIpack/9-Slice/list.png"
-source_md5="96e1bd4db124e96f9bdc262c6d213406"
-
 dest_files=[ "res://.import/list.png-fa290153e4d4fed565f99f960c46b0b8.stex" ]
-dest_md5="6e19781edbc6502be3fa3a2d4064d427"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/white_pressed.png-f47d5da991ad0bde2be6c345aaf55f41.stex"
 [deps]
 
 source_file="res://UI/Image/PixelUIpack/9-Slice/Ancient/white_pressed.png"
-source_md5="3b07b0108578a5cc66e207714b54b02a"
-
 dest_files=[ "res://.import/white_pressed.png-f47d5da991ad0bde2be6c345aaf55f41.stex" ]
-dest_md5="24acbd6ec8f4f16c2e47a5945137a25e"
 
 [params]
 
